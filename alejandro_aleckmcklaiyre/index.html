@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alejandro, Aleck Mcklaiyre</title>
+  </head>
+  <body>
+    <div id="nav">
+      <img class="logo" src="./assets/alekx_logo.png" alt="Alekx" />
+      <h1 class="title">Alejandro, Aleck Mcklaiyre</h1>
+    </div>
+
+    <div id="interest">
+      <h2 class="header">My interests and hobbies</h2>
+      <ul class="int-list">
+        <li>Listen to Music</li>
+        <li>Go on a road trips</li>
+        <li>Drawing</li>
+        <li>Video Editing</li>
+        <li>Cooking Foods</li>
+      </ul>
+      <img class="hero" src="./assets/hero-img.png" alt="cat image" />
+    </div>
+
+    <div id="work">
+      <h2 class="header">My Works</h2>
+      <ol class="work-list">
+        <li>
+          <a href="page1.html" target="_blank" class="work-card"> Work 1 </a>
+        </li>
+        <li>
+          <a href="page2.html" target="_blank" class="work-card"> Work 2 </a>
+        </li>
+        <li>
+          <a href="page3.html" target="_blank" class="work-card"> Work 3 </a>
+        </li>
+        <li>
+          <a href="page4.html" target="_blank" class="work-card"> Work 4 </a>
+        </li>
+        <li>
+          <a href="page5.html" target="_blank" class="work-card"> Work 5 </a>
+        </li>
+      </ol>
+    </div>
+
+    <div id="testimonial">
+      <h2 class="header">Testimonials</h2>
+      <img
+        src="./assets/testimonial.png"
+        alt="Testimonials"
+        class="testimonial-img"
+      />
+      <ul class="testimonial">
+        <li>Nice work! -Genandoy</li>
+        <li>A pretty clean and neat website -Mejares</li>
+        <li>Organize and clean -Esparagoza</li>
+      </ul>
+    </div>
+
+    <div id="gallery">
+      <h2 class="header">Gallery</h2>
+      <img class="waffles" src="./assets/waffle.jpg" alt="Waffles the cat" />
+      <img class="luna" src="./assets/luna.png" alt="Luna" />
+      <img class="maki" src="./assets/maki.jpg" alt="Maki Zenin" />
+      <img class="yuta" src="./assets/yuta.jpg" alt="JJK Yuta" />
+      <img class="minion" src="./assets/minion.jpg" alt="Minions" />
+      <img class="zoro" src="./assets/zoro.jpg" alt="Zoro" />
+    </div>
+
+    <div id="goals">
+      <h2 class="header">My Goals</h2>
+      <div class="goal-1">
+        <h3>Graduate from College</h3>
+        <p>Completing my IT degree to achieve better opportunities.</p>
+      </div>
+      <div class="goal-2">
+        <h3>Travel Abroad</h3>
+        <p>Saving up and planning to explore different countries.</p>
+      </div>
+      <div class="goal-3">
+        <h3>Have a Multiple Income Streams</h3>
+        <p>
+          Build a career that creates financial security and supports my future
+          goals.
+        </p>
+      </div>
+      <div class="goal-4">
+        <h3>Treat My Mom Every Month</h3>
+        <p>Show appreciation and give back.</p>
+      </div>
+      <div class="goal-5">
+        <h3>Buy My Own Laptop</h3>
+        <p>Saving up to improve my productivity and learning.</p>
+      </div>
+    </div>
+
+    <div id="comment">
+      <h2 class="header">Comments</h2>
+      <form class="comment-form" name="comment-form">
+        <div class="name">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            onkeyup="checkform()"
+            placeholder="Name"
+          />
+        </div>
+        <div class="comment">
+          <label for="comment-text"> Add comments: </label>
+          <textarea
+            id="comment-text"
+            name="comment"
+            rows="5"
+            cols="33"
+            onkeyup="checkform()"
+          ></textarea>
+        </div>
+        <button id="submit-btn" disabled>Submit</button>
+        <script src="script.js"></script>
+      </form>
+
+      <div class="comment-li">
+        <ul>
+          <li>Your goals are wonderful - Mejares</li>
+          <li>Nice goals! You will achieve that - Genandoy</li>
+          <li>Goodluck to your goals - Esparagoza</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="contact">
+      <form>
+        <h2 class="header">Contact Form</h2>
+        <div class="name-form">
+          <label for="fname">Name</label>
+          <input type="text" name="fname" id="fname" placeholder="Name" />
+        </div>
+
+        <div class="email-form">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="mail"
+            id="email"
+            placeholder="juan.delacruz@example.com"
+          />
+        </div>
+
+        <div class="contact-form">
+          <label for="contact-number">Contact Number</label>
+          <input
+            type="number"
+            name="contact"
+            id="contact-number"
+            placeholder="Contact Number"
+            data-for="phoneNumber"
+          />
+        </div>
+
+        <div class="add-form">
+          <label for="address">Where are you located?</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="address"
+          />
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <option value="">Select a country</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="GB">United Kingdom</option>
+            <option value="AU">Australia</option>
+            <option value="PH">Philippines</option>
+          </select>
+        </div>
+
+        <div class="info">
+          <label for="info">
+            Please add any additional details about the project
+          </label>
+          <textarea id="info" name="info" rows="5" cols="33"> </textarea>
+        </div>
+
+        <div class="button">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <img class="con-img" src="./assets/contact.jpg" alt="cat with phone" />
+    </div>
+  </body>
+</html>

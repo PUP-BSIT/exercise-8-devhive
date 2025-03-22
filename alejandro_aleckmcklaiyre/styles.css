@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  grid-area: header;
+  padding: 10px;
+  text-align: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero,
+.con-img {
+  grid-area: hero;
+  width: 30vw;
+  height: auto;
+  max-height: 300px;
+  max-width: 300px;
+  justify-content: center;
+  object-fit: contain;
+}
+
+#nav,
+#interest,
+#work,
+#testimonial,
+#gallery,
+#goals,
+#comment,
+#contact {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#nav {
+  display: grid;
+  text-align: center;
+  background-image: url(./assets/background.gif);
+  justify-content: center;
+  align-items: center;
+  height: vh;
+  gap: 5px;
+  padding: 10px;
+}
+
+.logo {
+  grid-area: logo;
+  width: 15vw;
+  height: auto;
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: contain;
+}
+
+.title {
+  grid-area: title;
+  font-size: 20px;
+}
+
+#interest {
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  background-color: #e0e0e0;
+}
+
+.int-list {
+  grid-area: int-list;
+  padding-left: 30px;
+  gap: 5px;
+}
+
+#work {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-image: url(./assets/bg_image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.work-list li {
+  background-color: #4e7b84;
+  color: white;
+  padding: 15px;
+  width: 25vw;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  list-style-type: none;
+  grid-area: work-list;
+}
+
+#testimonial {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #e0e0e0;
+}
+
+.testimonial {
+  grid-area: tmnls;
+  align-items: center;
+  list-style: none;
+}
+
+.testimonial li {
+  background-color: #d7d9db;
+  border: 1px solid;
+  gap: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 50vw;
+  max-width: 500px;
+  border-color: #55828b;
+}
+
+.testimonial-img {
+  grid-area: tmnls-img;
+  gap: 5px;
+  width: 30vw;
+  height: auto;
+  max-height: 300px;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+#gallery {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #bfbbbb;
+}
+
+.waffles,
+.luna,
+.maki,
+.yuta,
+.zoro,
+.minion {
+  grid-area: g-image;
+  width: 30vh;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.waffles {
+  grid-area: waffle;
+}
+
+.luna {
+  grid-area: luna;
+}
+
+.maki {
+  grid-area: maki;
+}
+
+.yuta {
+  grid-area: yuta;
+}
+
+.zoro {
+  grid-area: zoro;
+}
+
+.minion {
+  grid-area: minion;
+}
+
+#goals {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #4e7b84;
+}
+
+.goal-1,
+.goal-2,
+.goal-3,
+.goal-4,
+.goal-5 {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  font-size: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.goal-1 {
+  background-color: #d5ad36;
+  grid-area: g1;
+}
+.goal-2 {
+  background-color: #d5ad36;
+  grid-area: g2;
+}
+.goal-3 {
+  background-color: #d5ad36;
+  grid-area: g3;
+}
+.goal-4 {
+  background-color: #e5e5e5;
+  grid-area: g4;
+}
+.goal-5 {
+  background-color: #e5e5e5;
+  grid-area: g5;
+}
+.goal h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.goal p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#comment {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfbbbb;
+}
+
+.comment-form {
+  grid-area: com-form;
+  display: block;
+  background-color: #4e7b84;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: left;
+  gap: 1 0px;
+}
+
+.comment-li li {
+  grid-area: com-li;
+  align-items: center;
+  list-style: none;
+  background-color: D7D9DB;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  width: 50vw;
+  max-width: 300px;
+  border-color: #55828b;
+  background-color: #ffffff;
+}
+
+#submit-btn {
+  cursor: pointer;
+}
+
+#contact {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-image: url(./assets/bg_image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+form {
+  grid-area: cform;
+  display: block;
+  background-color: #4e7b84;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 20px;
+  width: 70vw;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.nameform,
+.email-form,
+.contact-form,
+.add-form,
+.info,
+.button {
+  padding: 5px;
+}
+
+button {
+  background-color: #4a5d63;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+@media (max-width: 426px) {
+  #nav {
+    grid-template-areas: "logo . title";
+  }
+
+  #interest {
+    grid-template-areas:
+      " header header header "
+      "int-list int-list int-list"
+      ". hero .";
+  }
+  #work {
+    grid-template-areas:
+      " header header header "
+      ".  work-list .";
+  }
+  #testimonial {
+    grid-template-areas:
+      " header header header"
+      ". tmnls-img ."
+      "tmnls tmnls tmnls";
+  }
+  #contact {
+    grid-template-areas:
+      "cform cform cform"
+      ". hero . ";
+  }
+  #gallery {
+    grid-template-areas:
+      "header header header"
+      ". waffle ."
+      ". yuta ."
+      ". luna ."
+      ". minion ."
+      ". maki  ."
+      ". zoro .";
+  }
+  #goals {
+    grid-template-areas:
+      "header"
+      " g1 "
+      " g2 "
+      " g3 "
+      " g4"
+      " g5 ";
+  }
+  #comment {
+    grid-template-areas:
+      "header"
+      " com-li "
+      " com-form ";
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  #nav {
+    grid-template-areas: "logo title ";
+  }
+
+  #interest {
+    grid-template-areas:
+      ". . hero"
+      "header . hero "
+      "int-list . hero"
+      ". . hero";
+  }
+
+  #work {
+    grid-template-areas:
+      "header header header "
+      "work-list work-list work-list";
+  }
+  #testimonial {
+    grid-template-areas:
+      "tmnls-img . header"
+      "tmnls-img . tmnls";
+  }
+  #contact {
+    grid-template-areas:
+      " cform . hero "
+      " cform . hero ";
+  }
+  #gallery {
+    grid-template-areas:
+      "header header"
+      "waffle yuta "
+      "waffle minion "
+      "maki luna "
+      "zoro zoro  ";
+  }
+  #goals {
+    grid-template-areas:
+      " . header ."
+      " g1 g2 g3"
+      " g4 g5 . ";
+  }
+  #comment {
+    grid-template-areas:
+      " header com-form"
+      " com-li  com-form";
+  }
+}
+
+@media (min-width: 769px) {
+  #nav {
+    grid-template-areas: "logo . title ";
+  }
+  #interest {
+    grid-template-areas:
+      ". . hero"
+      " header . hero "
+      "int-list . hero"
+      ". . hero";
+  }
+  #work {
+    grid-template-areas:
+      " header header header "
+      "work-list work-list work-list";
+  }
+  #testimonial {
+    grid-template-areas:
+      "tmnls-img . header"
+      "tmnls-img . tmnls";
+  }
+  #contact {
+    grid-template-areas:
+      " cform . hero "
+      " cform . hero ";
+  }
+  #gallery {
+    grid-template-areas:
+      ". header ."
+      "waffle yuta luna"
+      "waffle minion luna"
+      "maki zoro . ";
+  }
+  #goals {
+    grid-template-areas:
+      ". . header . ."
+      " g1 g2 g3 g4 g5";
+  }
+  #comment {
+    grid-template-areas:
+      " header com-form"
+      " com-li  com-form";
+  }
+}
