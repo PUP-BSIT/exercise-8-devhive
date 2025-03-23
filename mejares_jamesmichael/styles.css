@@ -248,6 +248,30 @@ button {
   min-width: 80px;
 }
 
+.comment-container {
+  display: grid;
+  border: 2px solid green;
+  background-color: rgba(5, 36, 16, 0.8);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.comment-message {
+  margin: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.comment-author {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
 .blink {
   animation: blink 1s step-start infinite;
 }
