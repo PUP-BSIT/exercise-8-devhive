@@ -1,23 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const commentName = document.getElementById("comment_name");
     const commentMessage = document.getElementById("comment_message");
     const commentButton = document.querySelector("#comment_button button");
+    const commentContainer = document.querySelector(".comment-container");
 
-    function toggleButtonState() {
-        if (commentName.value.trim() !== "" && 
-            commentMessage.value.trim() !== "") {
-            commentButton.disabled = false;
-            commentButton.style.opacity = "1";
-            commentButton.style.cursor = "pointer";
-        } else {
-            commentButton.disabled = true;
-            commentButton.style.opacity = "0.5";
-            commentButton.style.cursor = "not-allowed";
-        }
-    }
+    const toggleButtonState = () => {
+        const isFormValid = commentName.value.trim() 
+        && commentMessage.value.trim();
+        commentButton.disabled = !isFormValid;
+        commentButton.style.opacity = isFormValid ? "1" : "0.5";
+        commentButton.style.cursor = isFormValid ? "pointer" : "not-allowed";
+    };
 
-    commentName.addEventListener("input", toggleButtonState);
-    commentMessage.addEventListener("input", toggleButtonState);
+    const addComment = () => {
+        const commentDiv = document.createElement("div");
+        commentDiv.classList.add("comment-message");
+        commentDiv.innerHTML = 
+            `${commentMessage.value.trim()}
+            <div class="comment-author">- ${commentName.value.trim()}</div>`;
+        commentContainer.appendChild(commentDiv);
+        commentName.value = "";
+        commentMessage.value = "";
+
+        toggleButtonState();
+    };
+
+    [commentName, commentMessage].forEach(input =>
+        input.addEventListener("input", toggleButtonState)
+    );
+    commentButton.addEventListener("click", addComment);
 
     toggleButtonState();
 });
