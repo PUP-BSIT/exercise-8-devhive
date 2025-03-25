@@ -5,7 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const commentSection = document.querySelector("#comment_page");
 
     function toggleButton() {
-        commentButton.disabled = !nameInput.value.trim() || !commentInput.value.trim();
+        const isNameValid = nameInput.value.trim().length > 0;
+        const isCommentValid = commentInput.value.trim().length > 0;
+        commentButton.disabled = !(isNameValid && isCommentValid);
+
+        commentButton.style.opacity = commentButton.disabled ? "0.5" : "1";
+        commentButton.style.cursor = commentButton.disabled ? "not-allowed" : "pointer";
     }
 
     nameInput.addEventListener("input", toggleButton);
@@ -21,5 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
         nameInput.value = "";
         commentInput.value = "";
         commentButton.disabled = true;
+
+        toggleButton();
     });
+    toggleButton();
 });
