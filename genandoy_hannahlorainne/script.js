@@ -1,23 +1,29 @@
-function buttonEnabler() {
-	let name = document.getElementById("user_name");
-	let comment = document.getElementById("user_comment");
+document.addEventListener("DOMContentLoaded", function() {
+    const nameInput = document.getElementById('commenter-name');
+    const commentInput = document.getElementById('comment-text');
+    const commentButton = document.getElementById('comment-btn');
+    const commentForm = document.getElementById('commentForm');
 
-	if(comment.value.length > 0 && name.value.length > 0) {
-		document.getElementById("comment_button").disabled = false;
-    } else {
-		document.getElementById("comment_button").disabled = true;
-	}
-}
+    function toggleButton() {
+        commentButton.disabled = !nameInput.value || !commentInput.value;
+    }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const nameInput = document.getElementById('commenter-name');
-        const commentInput = document.getElementById('comment-text');
-        const commentButton = document.getElementById('comment-btn');
+    nameInput.addEventListener('input', toggleButton);
+    commentInput.addEventListener('input', toggleButton);
 
-        function toggleButton() {
-            commentButton.disabled = !(nameInput.value.trim() && commentInput.value.trim());
-        }
-
-        nameInput.addEventListener('input', toggleButton);
-        commentInput.addEventListener('input', toggleButton);
+    // Simple comment submission handler
+    commentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const newComment = document.createElement('p');
+        newComment.textContent = `${nameInput.value}: ${commentInput.value}`;
+        
+        const commentsSection = document.querySelector('#my_goals');
+        commentsSection.insertBefore(newComment, commentsSection.querySelector('h3'));
+        
+        // Reset form
+        nameInput.value = '';
+        commentInput.value = '';
+        commentButton.disabled = true;
     });
+});
