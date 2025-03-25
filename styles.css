@@ -81,3 +81,21 @@ p {
         opacity: 0;
     }
 }
+
+.cicada {
+    position: center;
+    margin-top: -370px;
+    margin-left: 540px;
+    font-size: 18px;
+}
+
+.cicada-art {
+    color: rgb(132, 163, 17);
+    animation: cicada-animation 1ms steps(2, start) infinite;
+}
+
+@keyframes cicada-animation {
+    50% {
+        opacity: 0;
+    }
+}
