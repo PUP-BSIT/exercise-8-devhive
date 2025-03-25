@@ -1,251 +1,164 @@
 body {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    background-color: #434343;
-    background-image: linear-gradient(45deg, #434343 0%, #000000 100%);
+    background: linear-gradient(45deg, #434343 0%, #3a3a3a 100%);
     margin: 0;
-    padding: 0;
+    padding-top: 65px;
     text-align: center;
-    color: #333;
+    color: #ffffff;
     line-height: 1.6;
 }
 
-.container {
-    width: 60%;
-    margin: 70px auto;
-    background: linear-gradient(to right, hsl(322, 100%, 94%), hsl(322, 100%, 88%));
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+.fixed-header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: linear-gradient(to left, #434343, #c40000);
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+text-align: left;
+z-index: 1000;
+height: 85px;
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 7px;
-    background: linear-gradient(to right, #e4b2fd, #ff4081);
-}
-
-.navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: rgba(228, 178, 253, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    transition: all 0.3s ease;
-}
-
-.navigation ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.navigation li {
-    display: inline-block;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    position: relative;
-}
-
-.navigation li::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: rgb(170, 0, 255);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.navigation li:hover::after {
-    width: 70%;
-}
-
-.navigation a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 600;
-}
-
-.navigation a:hover {
-    color: rgb(170, 0, 255);
-}
-
-#main_header {
-    color: black;
-    font-size: 18px;
-    margin: 0;
-    text-align: center;
-    letter-spacing: 1px;
+.fixed-header h1 {
+    margin-left: 25px;
+    font-size: 30px;
+    color: #ffffff;
     font-weight: bold;
 }
 
-h2 {
-    color: #202020;
-    background: linear-gradient(to right, #e4b2fd, #ff9ec0);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    margin-top: 30px;
-    text-align: center;
-    letter-spacing: 1px;
+.container {
+    width: 70%;
+    margin: 30px auto;
+    background: #810a0a;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
 }
 
-h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #aa00ff, #ff4081);
+#about,
+#interests_and_hobbies_page,
+#work_page,
+#goals_page,
+#testimonial_page,
+#gallery,
+#info_page,
+#contact_page,
+#comment_page {
+    width: 70%;
+    margin: 20px auto;
+    background: #434343d7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
-a {
-    color: #aa00ff;
-    transition: all 0.3s ease;
+h2, h3 {
+    color: #ffffff;
+    background: linear-gradient(to right, #930000, #a30000);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-top: 0%;
+    letter-spacing: 1px;
 }
 
-a:hover {
-    color: #ff4081;
-    text-decoration: none;
+ul, ol {
+    padding: 0;
+    list-style-position: inside;
 }
 
 li {
+    padding: 8px;
+    font-size: 15px;
+    margin: 10px 0;
+    background: rgba(140, 130, 130, 0.825);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(227, 222, 222, 0.05);
+    transition: all 0.3s ease;
     list-style: none;
-    text-align: center;
-    transition: transform 0.2s ease;
 }
 
 li:hover {
-    transform: translateY(-2px);
-}
-
-.contact-info ul li,
-#interests_and_hobbies_page ul li,
-#work_page ol li,
-#testimonial_page ol li {
-    padding: 8px;
-    font-size: 18px;
-    text-align: center;
-    list-style-position: inside;
-    margin: 10px 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.contact-info ul li:hover,
-#interests_and_hobbies_page ul li:hover,
-#work_page ol li:hover,
-#testimonial_page ol li:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background: rgb(0, 0, 0);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-3px);
+    color: rgb(255, 255, 255);
 }
 
 img {
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    display: block;
-    margin: 20px auto;
-    border: 5px solid white;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.395);
+    margin: 10px auto;
+    border: 5px solid #7a0000;
     transition: all 0.3s ease;
     object-fit: cover;
 }
 
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-}
-
 #gallery img {
-    width: 180px;
-    height: 180px;
-    margin: 15px;
+    width: 130px;
+    height: 130px;
+    margin: 5px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-    display: inline-block;
-    border: 3px solid white;
+    border: 1px solid rgb(0, 0, 0);
     transition: all 0.3s ease;
 }
 
 #gallery img:hover {
-    transform: scale(1.1) rotate(2deg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.contact-form {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
+#contact_page input,
+#contact_page textarea,
+#contact_page button,
+#contact input,
+#contact textarea,
+#contact button,
+.add-comment-page textarea,
+.add-comment-page input {
     width: 70%;
     padding: 12px;
     margin: 15px auto;
-    border: solid 1.5px #e2a4ff;
+    color: rgb(0, 0, 0);
+    border: solid 1px #000000;
     border-radius: 10px;
-    font-size: 16px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(248, 231, 236, 0.4);
     display: block;
     text-align: center;
     transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #b4b0b0;
+    
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #aa00ff;
-    box-shadow: 0 0 10px rgba(170, 0, 255, 0.3);
-    transform: translateY(-2px);
+#contact_page input:hover,
+#contact_page textarea:hover,
+#contact_page button:hover,
+#contact input:hover,
+#contact textarea:hover,
+#contact button:hover,
+.add-comment-page textarea:hover,
+.add-comment-page button:hover,
+.add-comment-page input:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    background-color: rgb(255, 255, 255);
 }
 
-.contact-form input {
-    height: 25px;
-}
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-    margin-bottom: 20px;
-}
-
-.contact-form button {
+#contact_page button,
+#contact button,
+.add-comment-page button {
     width: 50%;
     padding: 12px;
-    background: linear-gradient(to right, #ff4081, #aa00ff);
+    background: linear-gradient(to right, #7b0e0e, #ff0000);
     border: none;
     border-radius: 30px;
     color: white;
@@ -253,83 +166,34 @@ img:hover {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+    box-shadow: 0 4px 15px rgba(248, 231, 236, 0.4);
     letter-spacing: 1px;
-}
-
-.contact-form button:hover {
-    background: linear-gradient(to right, #e03070, #8a00cc);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 64, 129, 0.6);
-}
-
-.contact-form button:active {
-    transform: translateY(1px);
-}
-
-#about,
-#interests_and_hobbies_page,
-#work_page,
-#testimonial_page,
-#gallery, 
-#contact {
-    margin-bottom: 50px;
-    padding-bottom: 30px;
-    text-align: center;
-    position: relative;
-}
-
-#about::after, 
-#interests_and_hobbies_page::after, 
-#work_page::after, 
-#testimonial_page::after, 
-#gallery::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    width: 50%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(170, 0, 255, 0.5), transparent);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-#about, 
-#interests_and_hobbies_page, 
-#work_page, 
-#testimonial_page, 
-#gallery, 
-#contact {
-    animation: fadeIn 1s ease-out;
+    margin-bottom: 15px;
 }
 
 @media (max-width: 768px) {
-    .container {
+    .container,
+    #about,
+    #interests_and_hobbies_page,
+    #work_page,
+    #goals_page,
+    #testimonial_page,
+    #gallery,
+    #contact,
+    #comment_page {
         width: 85%;
         padding: 20px;
     }
-    
-    .navigation {
-        padding: 0 10px;
-    }
-    
-    .navigation li {
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
+
+    #contact-page input,
+    #contact-page textarea,
+    #contact-page button,
+    #contact input,
+    #contact textarea,
+    #contact button {
         width: 80%;
     }
-    
+
     #gallery img {
         width: 130px;
         height: 130px;
@@ -338,32 +202,35 @@ html {
 }
 
 @media (max-width: 480px) {
-    .container {
+    .container,
+    #about,
+    #interests_and_hobbies_page,
+    #work_page,
+    #goals_page,
+    #testimonial_page,
+    #gallery,
+    #contact,
+    #comment_page
+    .add-comment-page {
         width: 90%;
         padding: 15px;
     }
-    
-    .navigation ul {
-        flex-wrap: wrap;
-    }
-    
-    .navigation li {
-        padding: 3px 8px;
-        font-size: 12px;
-    }
-    
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
+
+    .comment-page input,
+    .comment-page textarea,
+    .comment-page button,
+    #contact input,
+    #contact textarea,
+    #contact button {
         width: 90%;
     }
-    
+
     #gallery img {
         width: 100px;
         height: 100px;
         margin: 5px;
     }
-    
+
     img {
         height: 120px;
         width: 120px;

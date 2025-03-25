@@ -1,18 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const nameInput = document.getElementById('commenter-name');
-    const commentText = document.getElementById('commenter-comment');
-    const commentButton = document.getElementById('comment-button');
+document.addEventListener("DOMContentLoaded", function() {
+    const nameInput = document.getElementById("commenter-name");
+    const commentInput = document.getElementById("commenter-comment");
+    const commentButton = document.getElementById("comment-button");
+    const commentSection = document.querySelector("#comment_page");
 
-    function checkFields() {
-        if (nameInput.value.trim() !== '' && commentText.value.trim() !== '') {
-            commentButton.disabled = false;
-        } 
-        
-        else {
-            commentButton.disabled = true;
-        }
+    function toggleButton() {
+        commentButton.disabled = !nameInput.value.trim() || !commentInput.value.trim();
     }
 
-    nameInput.addEventListener('input', checkFields);
-    commentText.addEventListener('input', checkFields);
+    nameInput.addEventListener("input", toggleButton);
+    commentInput.addEventListener("input", toggleButton);
+
+    commentButton.addEventListener("click", function() {
+        if (!nameInput.value.trim() || !commentInput.value.trim()) return;
+
+        const newComment = document.createElement("li");
+        newComment.textContent = `${commentInput.value} - ${nameInput.value}`;
+        commentSection.appendChild(newComment);
+
+        nameInput.value = "";
+        commentInput.value = "";
+        commentButton.disabled = true;
+    });
 });
