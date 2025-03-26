@@ -2,26 +2,39 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alejandro, Aleck Mcklaiyre</title>
   </head>
   <body>
     <div id="nav">
       <img class="logo" src="./assets/alekx_logo.png" alt="Alekx" />
-      <h1 class="title">Alejandro, Aleck Mcklaiyre</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#interest_container">Interest</a></li>
+        <li><a href="#work">Works</a></li>
+        <li><a href="#testimonial">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
 
-    <div id="interest">
+    <div id="home">
+      <div class="home-txt">
+        <h1 class="title">Hi! I'm Alejandro, Aleck Mcklaiyre</h1>
+        <p>Diploma in Information Technology student from PUP - Taguig</p>
+      </div>
+      <img class="my-image" src="./assets/aleck.gif" alt="Aleck" />
+    </div>
+
+    <div id="interest_container">
       <h2 class="header">My interests and hobbies</h2>
       <ul class="int-list">
-        <li>Listen to Music</li>
-        <li>Go on a road trips</li>
-        <li>Drawing</li>
-        <li>Video Editing</li>
-        <li>Cooking Foods</li>
+        <li class="interest-card"><h3>Listen to Music</h3></li>
+        <li class="interest-card"><h3>Go on a road trips</h3></li>
+        <li class="interest-card"><h3>Drawing</h3></li>
+        <li class="interest-card"><h3>Video Editing</h3></li>
+        <li class="interest-card"><h3>Cooking Foods</h3></li>
       </ul>
-      <img class="hero" src="./assets/hero-img.png" alt="cat image" />
     </div>
 
     <div id="work">
@@ -47,89 +60,94 @@
 
     <div id="testimonial">
       <h2 class="header">Testimonials</h2>
-      <img
-        src="./assets/testimonial.png"
-        alt="Testimonials"
-        class="testimonial-img"
-      />
-      <ul class="testimonial">
-        <li>Nice work! -Genandoy</li>
-        <li>A pretty clean and neat website -Mejares</li>
-        <li>Organize and clean -Esparagoza</li>
-      </ul>
+      <div class="testimonial-content">
+        <img
+          src="./assets/testimonial.png"
+          alt="Testimonials"
+          class="testimonial-img" />
+        <ul class="testimonial-list">
+          <li>Nice work! -Genandoy</li>
+          <li>A pretty clean and neat website -Mejares</li>
+          <li>Organize and clean -Esparagoza</li>
+        </ul>
+      </div>
     </div>
 
     <div id="gallery">
       <h2 class="header">Gallery</h2>
-      <img class="waffles" src="./assets/waffle.jpg" alt="Waffles the cat" />
-      <img class="luna" src="./assets/luna.png" alt="Luna" />
-      <img class="maki" src="./assets/maki.jpg" alt="Maki Zenin" />
-      <img class="yuta" src="./assets/yuta.jpg" alt="JJK Yuta" />
-      <img class="minion" src="./assets/minion.jpg" alt="Minions" />
-      <img class="zoro" src="./assets/zoro.jpg" alt="Zoro" />
+      <div class="images">
+        <img class="cat-1" src="./assets/cat_1.jpeg" alt="Cat" />
+        <img class="cat-2" src="./assets/cat_2.jpeg" alt="Cat with laptop" />
+        <img class="cat-3" src="./assets/cat_3.jpeg" alt="Cat with coffee" />
+        <img class="cat-4" src="./assets/cat_4.jpeg" alt="Cat with camera" />
+        <img class="cat-5" src="./assets/cat_5.jpeg" alt="Cat with laptop" />
+        <img class="cat-6" src="./assets/cat_6.jpeg" alt="Cat gitarist" />
+      </div>
     </div>
 
     <div id="goals">
       <h2 class="header">My Goals</h2>
-      <div class="goal-1">
-        <h3>Graduate from College</h3>
-        <p>Completing my IT degree to achieve better opportunities.</p>
-      </div>
-      <div class="goal-2">
-        <h3>Travel Abroad</h3>
-        <p>Saving up and planning to explore different countries.</p>
-      </div>
-      <div class="goal-3">
-        <h3>Have a Multiple Income Streams</h3>
-        <p>
-          Build a career that creates financial security and supports my future
-          goals.
-        </p>
-      </div>
-      <div class="goal-4">
-        <h3>Treat My Mom Every Month</h3>
-        <p>Show appreciation and give back.</p>
-      </div>
-      <div class="goal-5">
-        <h3>Buy My Own Laptop</h3>
-        <p>Saving up to improve my productivity and learning.</p>
+      <div class="goal-container">
+        <div class="goal-card gold">
+          <h3>Graduate from College</h3>
+          <p>Completing my IT degree to achieve better opportunities.</p>
+        </div>
+        <div class="goal-card gold">
+          <h3>Travel Abroad</h3>
+          <p>Saving up and planning to explore different countries.</p>
+        </div>
+        <div class="goal-card gold">
+          <h3>Have Multiple Income Streams</h3>
+          <p>
+            Build a career that creates financial security and supports my
+            future goals.
+          </p>
+        </div>
+        <div class="goal-card silver">
+          <h3>Treat My Mom Every Month</h3>
+          <p>Show appreciation and give back.</p>
+        </div>
+        <div class="goal-card silver">
+          <h3>Buy My Own Laptop</h3>
+          <p>Saving up to improve my productivity and learning.</p>
+        </div>
       </div>
     </div>
 
-    <div id="comment">
+    <div id="comment_page">
       <h2 class="header">Comments</h2>
-      <form class="comment-form" name="comment-form">
-        <div class="name">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            onkeyup="checkform()"
-            placeholder="Name"
-          />
+      <div class="comment-container">
+        <div class="comment-list">
+          <ul>
+            <li>Your goals are wonderful - Mejares</li>
+            <li>Nice goals! You will achieve that - Genandoy</li>
+            <li>Good luck to your goals - Esparagoza</li>
+          </ul>
         </div>
-        <div class="comment">
-          <label for="comment-text"> Add comments: </label>
-          <textarea
-            id="comment-text"
-            name="comment"
-            rows="5"
-            cols="33"
-            onkeyup="checkform()"
-          ></textarea>
-        </div>
-        <button id="submit-btn" disabled>Submit</button>
-        <script src="script.js"></script>
-      </form>
 
-      <div class="comment-li">
-        <ul>
-          <li>Your goals are wonderful - Mejares</li>
-          <li>Nice goals! You will achieve that - Genandoy</li>
-          <li>Goodluck to your goals - Esparagoza</li>
-        </ul>
+        <form class="comment-form" name="comment-form">
+          <div class="name">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              onkeyup="checkform()"
+              placeholder="Name" />
+          </div>
+          <div class="comment">
+            <label for="comment-text">Add comments:</label>
+            <textarea
+              id="comment-text"
+              name="comment"
+              rows="5"
+              cols="33"
+              onkeyup="checkform()"></textarea>
+          </div>
+          <button id="submit_btn" disabled>Submit</button>
+        </form>
       </div>
+      <script src="script.js"></script>
     </div>
 
     <div id="contact">
@@ -146,8 +164,7 @@
             type="email"
             name="mail"
             id="email"
-            placeholder="juan.delacruz@example.com"
-          />
+            placeholder="juan.delacruz@example.com" />
         </div>
 
         <div class="contact-form">
@@ -157,8 +174,7 @@
             name="contact"
             id="contact-number"
             placeholder="Contact Number"
-            data-for="phoneNumber"
-          />
+            data-for="phoneNumber" />
         </div>
 
         <div class="add-form">
@@ -167,8 +183,7 @@
             type="text"
             name="address"
             id="address"
-            placeholder="address"
-          />
+            placeholder="address" />
           <label for="country">Country:</label>
           <select id="country" name="country">
             <option value="">Select a country</option>
@@ -188,7 +203,7 @@
         </div>
 
         <div class="button">
-          <button type="submit">Submit</button>
+          <button type="button">Submit</button>
         </div>
       </form>
       <img class="con-img" src="./assets/contact.jpg" alt="cat with phone" />
