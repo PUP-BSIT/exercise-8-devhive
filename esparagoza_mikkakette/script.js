@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
         commentButton.disabled = !(isNameValid && isCommentValid);
 
         commentButton.style.opacity = commentButton.disabled ? "0.5" : "1";
-        commentButton.style.cursor = commentButton.disabled ? "not-allowed" : "pointer";
+        commentButton.style.cursor = commentButton.disabled ? 
+            "not-allowed" : "pointer";
     }
 
     nameInput.addEventListener("input", toggleButton);
