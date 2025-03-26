@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const commentForm = document.getElementById('commentForm');
 
     function toggleButton() {
-        commentButton.disabled = !nameInput.value || !commentInput.value;
+        commentButton.disabled = !nameInput.value.trim() 
+        || !commentInput.value.trim();
     }
 
     nameInput.addEventListener('input', toggleButton);
@@ -19,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
         newComment.textContent = `${nameInput.value}: ${commentInput.value}`;
         
         const commentsSection = document.querySelector('#my_goals');
-        commentsSection.insertBefore(newComment, commentsSection.querySelector('h3'));
+        commentsSection.insertBefore(newComment, 
+            commentsSection.querySelector('h3'));
         
         // Reset form
         nameInput.value = '';
