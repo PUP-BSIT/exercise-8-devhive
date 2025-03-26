@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url("assets/CLI.gif") no-repeat center center fixed;
+    background: url("assets/matrix.gif") no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
@@ -22,30 +22,43 @@ body {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: center;
     position: relative;
     z-index: 2;
     padding: 20px;
 }
 
+.cicada {
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.cicada-art {
+    text-align: center;
+    color: rgb(132, 163, 17);
+    animation: cicada-animation 1ms steps(2, start) infinite;
+}
+
+@keyframes cicada-animation {
+    50% {
+        opacity: 0;
+    }
+}
+
 #header_page {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-h1 {
+ #header_page h1 {
+    margin-top: -60px;
+    margin-bottom: -10px;
+    text-align: center;
     font-size: 10rem;
     font-weight: bold;
-    margin: 0;
     text-transform: uppercase;
-}
-
-p {
-    position: relative;
-    top: -50px;
-    left: -510px;
-    font-size: 30px;
-    margin-top: 0;
 }
 
 #content_list {
@@ -54,10 +67,11 @@ p {
     width: 500px;
 }
 
-#header {
+#caption {
     background: linear-gradient(to right,#148019,#044e07);
     color: white;
     display: flex;
+    justify-content: center;
     width:auto;
     padding-left: 15px;
     position: relative;
@@ -66,6 +80,13 @@ p {
     border-left: 2px solid white;
     border-right: 2px solid black;
     box-shadow: 2px 2px 0px gray;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10;
+    text-align: center;
 }
 
 #links {
@@ -82,20 +103,88 @@ p {
     }
 }
 
-.cicada {
-    position: center;
-    margin-top: -370px;
-    margin-left: 540px;
-    font-size: 18px;
+@media (max-width: 850px) {
+    #header_page h1 {
+        font-size: 10rem;
+    }
+
+    #content_list {
+        width: 450px;
+    }
 }
 
-.cicada-art {
-    color: rgb(132, 163, 17);
-    animation: cicada-animation 1ms steps(2, start) infinite;
+@media (max-width: 768px) {
+    .cicada {
+        font-size: 11px;
+    }
+
+    #header_page h1 {
+        font-size: 9rem;
+    }
+
+    #content_list {
+        width: 450px;
+    }
 }
 
-@keyframes cicada-animation {
-    50% {
-        opacity: 0;
+@media (max-width: 480px) {
+    .cicada {
+        font-size: 10px;
+    }
+
+    #header_page h1 {
+        font-size: 8rem;
+    }
+
+    #content_list {
+        width: 400px;
+    }
+}
+
+@media (max-width: 350px) {
+    .cicada {
+        font-size: 7px;
+    }
+
+    #header_page h1 {
+        margin-top: -20px;
+        margin-bottom: 5px;
+        font-size: 75px;
+    }
+
+    #content_list {
+        width: 220px;
+    }
+}
+
+@media (max-width: 250px) {
+    .cicada {
+        font-size: 5px;
+    }
+
+    #header_page h1 {
+        margin-top: -20px;
+        margin-bottom: 3px;
+        font-size: 65px;
+    }
+
+    #content_list {
+        width: 200px;
+    }
+}
+
+@media (max-width: 150px) {
+    .cicada {
+        font-size: 1px;
+    }
+
+    #header_page h1 {
+        margin-top: -20px;
+        margin-bottom: 3px;
+        font-size: 5px;
+    }
+
+    #content_list {
+        width: 100px;
     }
 }
