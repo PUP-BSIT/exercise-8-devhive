@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const isNameValid = nameInput.value.trim().length > 0;
         const isCommentValid = commentInput.value.trim().length > 0;
         commentButton.disabled = !(isNameValid && isCommentValid);
-
         commentButton.style.opacity = commentButton.disabled ? "0.5" : "1";
         commentButton.style.cursor = commentButton.disabled ? 
             "not-allowed" : "pointer";
